@@ -1,0 +1,18 @@
+{
+  "name": "automated-news-digest-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fetches, deduplicates, and renders a five-category daily news digest.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
