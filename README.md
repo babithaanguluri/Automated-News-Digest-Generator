@@ -38,6 +38,23 @@ npm start
 
 The output directory is created automatically. The generated file is written exactly to the path in `config.json`.
 
+## Running with Docker
+
+Build and run the project in a container:
+
+```bash
+docker build -t automated-news-digest-builder .
+docker run --rm automated-news-digest-builder
+```
+
+The image starts with the bundled `config.json.example` as a default config, so it can produce a demo digest immediately without a real NewsAPI key. For a live run, update the generated `config.json` in the container or mount a host config file before starting the container.
+
+A Compose-based workflow is also included:
+
+```bash
+docker compose up --build
+```
+
 For a live NewsAPI request, use a real API key. Optional environment overrides are available for compatible deployments:
 
 ```bash

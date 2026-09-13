@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    working_dir: /app
+    command: npm start
+    environment:
+      NEWS_API_URL: ${NEWS_API_URL:-https://newsapi.org/v2/top-headlines}
+      NEWS_COUNTRY: ${NEWS_COUNTRY:-us}
+    volumes:
+      - .:/app
+      - /app/node_modules
